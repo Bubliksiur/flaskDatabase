@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block head %}
+<title>Add to database</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+{% endblock %}
+{% block body %}
+<section class="form-container" aria-label="Add to database form">
+    <h1>Add to Database</h1>
+    <form method="POST" action="/add" novalidate>
+        <input placeholder="Name" type="text" name="name" id="name" required autocomplete="name" />
+        <input placeholder="Email" type="email" name="email" id="email" required autocomplete="email" />
+        <button type="submit">Submit</button>
+    </form>
+    <a href="/users" aria-label="Show users in database">
+        <button type="button">Show users in database</button>
+    </a>
+</section>
+{% endblock %}
